@@ -40,3 +40,26 @@ function clearCart() {
     totalPrice = 0; // Reset the total price
     updateCart(); // Update the cart display
   }
+
+  function redirectToPurchase() {
+    // Redirect to the /purchase route
+    window.location.href = '/purchase';
+}
+
+  
+function clearCart() {
+    cartItems = [];
+    totalPrice = 0;
+    updateCart();
+  }
+
+function logout() {
+    // Redirect to the /logout route
+    window.location.href = '/logout';
+}
+
+function continueShopping() {
+    // Redirect to the /products route
+    window.location.href = '/products';
+}
+
