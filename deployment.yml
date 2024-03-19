@@ -17,9 +17,9 @@ spec:
           image: uonyeka/upcommerce:v3
           ports:
             - containerPort: 5000
-          imagePullPolicy: Always 
+          imagePullPolicy: Always
           resources:
             limits:
-              cpu: "2" 
-              memory: "2Gi" 
+              cpu: "2"
+              memory: "2Gi"
 
