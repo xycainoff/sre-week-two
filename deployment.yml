@@ -14,17 +14,12 @@ spec:
     spec:
       containers:
         - name: upcommerce
-          image: uonyeka/upcommerce:v2 # Replace with your Docker image and tag
+          image: uonyeka/upcommerce:v3
           ports:
             - containerPort: 5000
-          volumeMounts:
-            - name: static
-              mountPath: /app/static
-            - name: templates
-              mountPath: /app/templates
-          imagePullPolicy: Always # Always pull the latest image
-      volumes:
-        - name: static
-          emptyDir: {}
-        - name: templates
-          emptyDir: {}
+          imagePullPolicy: Always 
+          resources:
+            limits:
+              cpu: "2" 
+              memory: "2Gi" 
+

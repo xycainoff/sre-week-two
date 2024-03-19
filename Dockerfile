@@ -8,12 +8,8 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the application code into the container
 # Copy the necessary files and directories into the container
-COPY static /app/static
-COPY templates /app/templates
-COPY app.py /app/app.py
-COPY requirements.txt /app/requirements.txt
+COPY . .
 
 # Install Flask
 RUN pip install -r requirements.txt
