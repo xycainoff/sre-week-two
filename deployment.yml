@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: upcommerce-app
+  name: upcommerce-app-two
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: upcommerce-app
+      app: upcommerce-app-two
   template:
     metadata:
       labels:
-        app: upcommerce-app
+        app: upcommerce-app-two
     spec:
       containers:
         - name: upcommerce
@@ -20,6 +20,6 @@ spec:
           imagePullPolicy: Always
           resources:
             limits:
-              cpu: "2"
+              cpu: "10"
               memory: "4Gi"
 
